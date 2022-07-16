@@ -32,7 +32,9 @@ The changes to the library include:
 ### Blynk as Input Data Interface ###
 Although designed as a platform for IoT software, a free account (two devices max) can be used to create, fast & easy, a user interface to input data. It's well [documented](https://docs.blynk.io/en/) and has a [Quickstart guide](https://docs.blynk.io/en/getting-started/what-do-i-need-to-blynk) that will get you running in minutes. I'm using an [Adafruit ESP32 Feather V2](https://www.adafruit.com/product/5400) that's [supported](https://github.com/blynkkk/blynkkk.github.io/blob/master/SupportedHardware.md) via the [BlynkSimpleEsp32](https://github.com/blynkkk/blynk-library/blob/888a81dd84ec8bab19d8652654d03c58aa12646b/src/BlynkSimpleEsp32.h) library that can be installed via Arduino IDE following [these instructions](https://docs.blynk.io/en/blynk.edgent-firmware-api/installation/what-do-i-need-to-blynk).
 
+This is the Web Dasbhboard from Blynk. Adjust any MPR121 parameter and then click on START to issue the cap.begin() method and restart the breakout boards.
 
+![Screenshot 2022-07-16 182932](https://user-images.githubusercontent.com/33431200/179375026-d2b4b2d4-7a97-4b32-a04d-ed7c14d7b3f9.jpg)
 
 
 ### Other Useful Application Notes ###
