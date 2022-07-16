@@ -17,13 +17,17 @@ At the end of the charge time, the electrode voltage is measured with a 10 bit A
 This is why the Autoconfig feature is so sweet: it automatically tests various charge times and charge currents to determine the maximum values (within definable limits) that result in controlled output, and it does this *for each individual electrode*, allowing for differences in capacitance due to conector length, pad characteristics, etc.  Details on the input variables for Autoconfig start in Page 7 of [AN3889](https://www.nxp.com/docs/en/application-note/AN3889.pdf).
 
 ### MPR121 Library ###
-To use Autoconfig and change calibration parameters during program execution, some serious modifications to the Adafruit_MPR121 library files are necessary, so I copied and renamed the .cpp and .h files and placed them in the same file directory of the .ino sketch. This way the original MPR121 library remains untouched.
+To use Autoconfig and to change calibration parameters during program execution, some serious modifications to the Adafruit_MPR121 library files are necessary, so I copied and renamed the .cpp and .h files and placed them in the same file directory of the .ino sketch. This way the original MPR121 library remains untouched.
 
-The main changes to the library include:
-* Differentiating failure reason to start the board (I2C & internal logic)
-* Set parameters for:
-  * Baseline Filters
-  * Touch / Release Debounce
+The changes to the library include:
+* Differentiating failure reason when starting the board (I2C & internal logic)
+* Display of Charge Time and Charge Current defined by Autoconfig
+* Setting parameters for:
+  * Baseline Filtering Control
+  * Touch/Release Debounce
+  * First & Secondary Filtering and Sample Interval
+  * Autoconfig Level Limits & Target
+* Clean-up of unused code
 
 ### Other Useful Application Notes ###
 
