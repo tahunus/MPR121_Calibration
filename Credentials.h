@@ -1,7 +1,7 @@
-#define BLYNK_TEMPLATE_ID "TMPLqfPwQin-"
-#define BLYNK_DEVICE_NAME "RPM Cap Tests AutoConfig"
-#define BLYNK_AUTH_TOKEN "KwcfptBquyvnh1N1Jg1Vo-juPXzKLttP"
+#define BLYNK_TEMPLATE_ID ""
+#define BLYNK_DEVICE_NAME ""
+#define BLYNK_AUTH_TOKEN ""
 char auth[] = BLYNK_AUTH_TOKEN;
-char ssid[] = "qENTERPRISE";   
-char pass[] = "doctorhouse2020";  
+char ssid[] = "";   
+char pass[] = "";  
 
