@@ -43,7 +43,7 @@ Other options for output data (to plot or print) include:
 ### Blynk as Input Data Interface ###
 Although designed as a platform for IoT software, a free account (two devices max) can be used to create, fast & easy, a user interface to input data. It's well [documented](https://docs.blynk.io/en/) and has a [Quickstart Guide](https://docs.blynk.io/en/getting-started/what-do-i-need-to-blynk) that will get you running in minutes. I'm using an [ESP32 Feather V2](https://www.adafruit.com/product/5400) and there is a long list of [supported hardware](https://github.com/blynkkk/blynkkk.github.io/blob/master/SupportedHardware.md). For ESP32's, use the [BlynkSimpleEsp32](https://github.com/blynkkk/blynk-library/blob/888a81dd84ec8bab19d8652654d03c58aa12646b/src/BlynkSimpleEsp32.h) library that can be installed via Arduino IDE following [these instructions](https://docs.blynk.io/en/blynk.edgent-firmware-api/installation/what-do-i-need-to-blynk).
 
-Below is a screenshot of what the Web Dasbhboard looks like: adjust any MPR121 parameter and then click on START to issue the cap.begin() method and restart the breakout boards with the new parameters.
+Below is a screenshot of what the Web Dasbhboard can look like: adjust any MPR121 parameter and then click on START to issue the cap.begin() method and restart the breakout boards with the new parameters.
 
 ![Screenshot 2022-07-16 182932](https://user-images.githubusercontent.com/33431200/179375026-d2b4b2d4-7a97-4b32-a04d-ed7c14d7b3f9.jpg)
 
