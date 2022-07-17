@@ -30,7 +30,7 @@ void loop() {
   if (START == 1) {
     Blynk.virtualWrite(V21,0); START = 0; //reset START button in Blynk Console
     if (!sensorStarted) Wire.begin (22,20); 
-    for (i=0;i<n;i++) { //configure and start the 3 MPR121 breakout boards
+    for (i=0;i<n;i++) { //configure and start the "n" MPR121 breakout boards
       if (!S[i].begin(addr[i])) {Serial.println(String(addr[i]) + " Not Ok"); while (1); }
       oldT[i] = 0;
     }
