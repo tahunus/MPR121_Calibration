@@ -64,26 +64,19 @@ bool MPR121::begin(uint8_t i2caddr, TwoWire *theWire) {
   writeRegister(MPR121_ECR, ECR_SETTING); 
   delay(80); //make time for autoconfig and possible auto reconfig of all electrodes
   
-  for (uint8_t i = 0x5F; i < 0x72; i++) {  //Display results of autoconfig
+  Serial.print("--Sensor at 0x"); Serial.println(i2caddr,HEX);
+  for (uint8_t i = 0x5F; i < 0x6B; i++) {  //Display results of autoconfig
     uint8_t r = readRegister8(i);
-    if (i < 0x6B) {
-      Serial.print("CDC"); Serial.print(i-95); 
-      Serial.print(" ");Serial.print(i,HEX);
-      Serial.print(": 0x"); Serial.print(r,HEX);
-      Serial.print(" "); Serial.println(r,DEC);
-    }
-    else {
-      if (i > 0x6B) {
-        Serial.print("CDT"); Serial.print((i-108)*2);
-        Serial.print(" ");Serial.print(i,HEX);
-        Serial.print(": 0x"); Serial.print((r & B00000111),HEX); //lower 3 bits
-        Serial.print(" "); Serial.println((r & B00000111),DEC);
-        Serial.print("CDT"); Serial.print((i-108)*2+1);
-        Serial.print(" ");Serial.print(i,HEX);
-        Serial.print(": 0x"); Serial.print((r >> 4),HEX);  //upper 4 bits 
-        Serial.print(" "); Serial.println((r >> 4),DEC);
-      }
-    }
+    Serial.print("CDC"); Serial.print(i - 0x5F);    //0 to 11
+    Serial.print("(0x"); Serial.print(i,HEX);      //5F to 6A
+    Serial.print("):"); Serial.print(r,DEC);  
+    int depaso = trunc((i - 0x5F)/2);
+    r = readRegister8(depaso + 0x6C); 
+    Serial.print("\tCDT"); Serial.print(i - 0x5F);  //0 to 11
+    Serial.print("(0x"); Serial.print(depaso + 0x6C,HEX);  //6C to 71
+    Serial.print("):" ); 
+    if ((i - 0x5F) % 2 == 0) Serial.println((r & B00000111),DEC); //lower 3 bits
+    else Serial.println((r >> 4),DEC);  //upper 4 bits 
   }
   return true;
 }
