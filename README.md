@@ -1,10 +1,8 @@
 # MPR121 Advanced Calibration
 
-addition of text as a test
-
 This is for anyone using [Adafruit’s MPR121 Breakout Board](https://www.adafruit.com/product/1982) and, having gone through [Adafruit’s learning guide](https://learn.adafruit.com/adafruit-mpr121-12-key-capacitive-touch-sensor-breakout-tutorial) (which BTW is a very good starting point), has reached the limit of what can be done with the Set Thresholds public method of the [MPR121 library](https://github.com/adafruit/Adafruit_MPR121).
 
- (deleted first sentence as test) of individual electrode sensitivity using baseline filtering, touch filtering & debounce, and the MPR121's autoconfig feature, all during program execution, thus avoiding the need to recompile & reload with each scenario being tested. Its objective is finding the optimal calibration parameters to be later implemented in the appropriate production program.
+This program allows for calibration of individual electrode sensitivity using baseline filtering, touch filtering & debounce, and the MPR121's autoconfig feature, all during program execution, thus avoiding the need to recompile & reload with each scenario being tested. Its objective is finding the optimal calibration parameters to be later implemented in the appropriate production program.
 
 A necessary pre-read to understand this guide is [NXP’s MPR121 Datasheet](https://www.nxp.com/docs/en/data-sheet/MPR121.pdf), particularly *Section 3. Device Operation Overview* and *Section 5. Register Operations Descriptions*. If you don’t know what a register is, go first to  SparkFun’s [Level Up Your Arduino Code: Registers](https://www.youtube.com/watch?v=6q1yEb_ukw8). And if you’re unfamiliar with binary operations, start with their [Digital Logic Tutorial]( https://learn.sparkfun.com/tutorials/digital-logic). 
 
